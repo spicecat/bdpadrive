@@ -1,11 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet"
-import Login from "./components/Login";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import Login from "./components/Login"
 
 const App = () => {
   return (
