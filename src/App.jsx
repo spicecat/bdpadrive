@@ -1,14 +1,16 @@
 import React from "react"
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Helmet } from "react-helmet"
-import Login from "./containers/Login"
-import Explorer from "./containers/Explorer"
+import { Explorer, Layout, Login } from "./containers"
 
 const App = () => {
   return <BrowserRouter>
     <Routes>
-      <Route index element={<Login />} />
-      <Route path="/explorer" element={<Explorer />} />
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Login />} />
+        <Route path='explorer' element={<Explorer />} />
+        <Route path='*' element={<Explorer />} />
+      </Route>
     </Routes>
   </BrowserRouter>
 }
