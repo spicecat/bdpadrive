@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material'
+import { useUser } from '../contexts'
 // import HomeIcon from '@mui/icons-material/Home'
 
 export default function Navbar() {
+    const { username } = useUser()
 
     return (
         <AppBar position='static'>
