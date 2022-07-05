@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import { Typography, Button, TextField } from '@mui/material'
-import './login.css'
+
 const Login = () => {
     const startText = "Sign in";
     const buttonInitial = "New? Sign up";
