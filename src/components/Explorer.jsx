@@ -1,4 +1,4 @@
-import CreateFile from "./components/CreateFile"
+import CreateFile from "./CreateFile"
 
 const Explorer = () => {
     return(

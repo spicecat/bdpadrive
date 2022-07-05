@@ -1,33 +1,16 @@
-import React from "react";
+import React from "react"
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Helmet } from "react-helmet"
 import Login from "./components/Login"
+import Explorer from "./components/Explorer"
 
 const App = () => {
-  return (
-
-
-    <div className="App" >
-      
-      <Helmet>
-        <style>{"body { background-color: floralWhite; }"}</style>
-
-        
-      </Helmet>
-
-      <div style={{width:'100%', height:'100%', display:'flex', justifyContent:'center',alignItems:'center', position:'absolute'}}>
-
-      <Login></Login>
-
-      </div>
-       
-
-
-      
-    </div>
-
-
-  );
+  return <BrowserRouter>
+    <Routes>
+      <Route index element={<Login />} />
+      <Route path="/explorer" element={<Explorer />} />
+    </Routes>
+  </BrowserRouter>
 }
 
-export default App;
-
+export default App
